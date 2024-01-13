@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(90%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.team-details {
+  animation: slideInRight 1s ease-out; /* Adjust the duration and timing function as needed */
+}
+
 
 @keyframes slideInLeft {
   from {
@@ -14,6 +29,6 @@
   }
 }
 
-.team-details {
+.services-zoom-in {
   animation: slideInLeft 1s ease-out; /* Adjust the duration and easing as needed */  
 }

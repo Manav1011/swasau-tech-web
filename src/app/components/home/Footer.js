@@ -3,8 +3,8 @@ import React from 'react'
 
 function Footer({grad}) {
   return (
-    <div className="" style={{ fontFamily: "dosislight"}}>
-        <footer className={`${grad}`}>
+    <div className="h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10" style={{ fontFamily: "dosislight"}}>
+        <footer>
             <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <div>

@@ -1,8 +1,8 @@
-import Image from "next/image";
+import '../../fonts.css'
 function TeamMemberCard(props) {    
-    const {id,dp,name,designation,github,linkedin} = props    
+    const {id,dp,name,designation,github,linkedin} = props     
   return (
-    <div className="mb-10 text-center text-gray-500 dark:text-gray-400" key={id}>   
+    <div className="mb-10 text-center text-gray-500 dark:text-gray-400">
         <img className="mx-auto mb-4 w-36 h-36 rounded-full mix-blend-darken" src={dp} alt="Bonnie Avatar" />
         <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">
             <a href="#">{name}</a>

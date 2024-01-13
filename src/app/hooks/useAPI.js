@@ -14,13 +14,7 @@ async function useAPI(query, variables) {
         variables: variables,
       },
       {
-        headers: {
-          'Accept-Encoding': 'gzip, deflate, br',
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          'Connection': 'keep-alive',
-          'DNT': '1',
-          'Origin': 'https://033bad1b-c8e2-4ee5-b8f8-f4c19c33ca37.ctfcloud.net',
+        headers: {          
           'Authorization': 'Bearer VCYEOUT8qwcOBm9g9xP_q4dJzwcZDnCwcp1i0jEsUUQ',
         },
       }
