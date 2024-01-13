@@ -14,10 +14,12 @@
     "axios": "^1.6.5",
     "contentful": "^10.6.16",
     "next": "14.0.4",
+    "next-images": "^1.8.5",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-intersection-observer": "^9.5.3"
+    "react-intersection-observer": "^9.5.3",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@types/node": "20.11.0",
