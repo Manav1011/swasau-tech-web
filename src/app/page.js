@@ -3,6 +3,7 @@ import Link from 'next/link'
 import NavBar from './components/home/NavBar'
 import MainGraphic from './components/home/MainGraphic'
 import Footer from './components/home/Footer'
+import TeamSection from './components/home/TeamSection'
 
 export default function Home() {  
   const gradient_arr = [
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <NavBar grad={gradient_arr[choosed_grad_index]}/>      
       <MainGraphic grad={gradient_arr[choosed_grad_index]}/>
+      <TeamSection grad={gradient_arr[choosed_grad_index]}/>
       <Footer grad={gradient_arr[choosed_grad_index]}/>
     </>
   )

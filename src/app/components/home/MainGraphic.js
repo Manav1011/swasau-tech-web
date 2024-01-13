@@ -1,5 +1,7 @@
-import '@/app/fonts.css'
-function MainGraphic({grad}) {
+
+import '../../fonts.css'
+
+function MainGraphic({grad}) {  
     const graphics_arr = [
         "Collaboration-cuate.svg",
         "Printed-circuit-board-amico.svg",

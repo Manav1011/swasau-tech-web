@@ -1,14 +1,15 @@
 "use client";
-import "@/app/fonts.css";
-function NavBar({ grad }) {
+import "../../fonts.css";
+import { useState } from "react";
+function NavBar() {  
   const showMenu = false;
   const toggleMenuMobile = () => {
     document.getElementById("mobile-menu").classList.toggle("hidden");
   };
   return (
     <nav
-      className={`sticky top-0 z-10 ${grad} bg-opacity-30`}
-      style={{ fontFamily: "dosislight" }}
+      className={`sticky top-0 z-10 ${null} bg-opacity-30`}
+      style={{ fontFamily: "dosislight",background:'transparent','backdropFilter':'blur(5px)'}}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
