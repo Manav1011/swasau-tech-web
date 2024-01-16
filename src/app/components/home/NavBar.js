@@ -3,6 +3,9 @@ import Image from "next/image";
 import "../../fonts.css";
 function NavBar() {  
   const showMenu = false;
+  const scrollElementToView = (id) => {
+    document.getElementById(id).scrollIntoView()
+  }
   const toggleMenuMobile = () => {
     document.getElementById("mobile-menu").classList.toggle("hidden");
   };
@@ -69,18 +72,19 @@ function NavBar() {
                 >
                   Clients
                 </a>
-                <a
-                  href="#"
+                <button                  
                   className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  onClick={() => {scrollElementToView('servicescontainer')}}
                 >
                   Services
-                </a>
-                <a
+                </button>
+                <button
                   href="#"
                   className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  onClick={() => {scrollElementToView('teamdetailscontainer')}}
                 >
                   Team
-                </a>
+                </button>
                 <a
                   href="#"
                   className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"

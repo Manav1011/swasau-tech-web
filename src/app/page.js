@@ -17,7 +17,7 @@ export default async function Home() {
       <NavBar grad={gradient_arr[choosed_grad_index]}/>      
       <MainGraphic grad={gradient_arr[choosed_grad_index]}/>
       <ServiceListing/>
-      <TeamSection grad={gradient_arr[choosed_grad_index]}/>
+      <TeamSection/>
       <Footer grad={gradient_arr[choosed_grad_index]}/>
     </>
   )

@@ -2,9 +2,9 @@
 import { useInView } from "react-intersection-observer";
 import TeamMemberCard from "./TeamMemberCard";
 import useAPI from '../../hooks/useAPI'
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-function TeamSection({ grad }) {     
+function TeamSection() {     
     const [members,setMembers] = useState({
         CEO:null,
         CTO:null,
@@ -49,12 +49,19 @@ function TeamSection({ grad }) {
           })
         })
       }
-    },[])  
-  const { ref: myref, inView, entry } = useInView();  
+    },[])
+  let options = {
+    threshold:0.1,    
+  }
+  const teammembersRef = useRef()
+  const { ref: myref, inView, entry } = useInView(options);  
+  if(inView){
+    // teammembersRef.current.scrollIntoView()
+  }
   if(members.CTO && members.CTO){
     return (        
-        <section className={`${inView ? "team-details" : null}  bg-slate-200`} id="team-details-div" ref={myref}>
-          <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+        <section className={`bg-rose-100 pt-5`} id="teamdetailscontainer" ref={myref}>
+          <div className={`${inView ? "team-details" : null} py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6`} ref={teammembersRef}>
             <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
               <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-slate-900	 sm:text-4xl md:text-[40px]">
                 Our team

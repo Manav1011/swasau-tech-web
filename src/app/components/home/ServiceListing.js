@@ -3,9 +3,9 @@ import '../../fonts.css'
 import ServiceCard from './ServiceCard'
 import { useInView } from "react-intersection-observer";
 import useAPI from '../../hooks/useAPI'
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-function ServiceListing() {  
+function ServiceListing() {
   const [services,setServices] = useState()
   useEffect(() => {
     if(!services){
@@ -27,12 +27,23 @@ function ServiceListing() {
       })
     }
   },[])
-  const { ref: myref, inView, entry } = useInView(); 
+  const serviceContainer = useRef()
+  let options = {
+    threshold:0.1,
+    rootMargin: '0px',    
+  }  
+  const serviceRef = useRef()
+  const { ref: myref, inView, entry } = useInView(options); 
+
+  if(inView){
+    console.log(entry); 
+    // serviceContainer.current.scrollIntoView()
+  }
   if(services){
     return (
-      <section className={`${inView?'services-zoom-in':null} pt-20 bg-slate-200`}>
-        <div className="container mx-auto">
-          <div className="flex flex-wrap" ref={myref}>
+      <section className={`pt-20 bg-indigo-200`} ref={myref} id='servicescontainer'>
+        <div className={`${inView?'services-zoom-in':null} container mx-auto`} ref={serviceContainer}>
+          <div className="flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">              
                 <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-slate-900	 sm:text-4xl md:text-[40px]">
