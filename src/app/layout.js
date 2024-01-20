@@ -1,7 +1,8 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import  {GlobalStateProvider} from './context/GlobalStateProvider'
-
+import NavBar from './components/home/NavBar'
+import Footer from './components/home/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-slate-200`}>
+        <NavBar/>
         <GlobalStateProvider>{children}</GlobalStateProvider>
+        <Footer/>
       </body>
     </html>
   )

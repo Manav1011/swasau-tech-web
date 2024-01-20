@@ -4,8 +4,11 @@ import ServiceCard from './ServiceCard'
 import { useInView } from "react-intersection-observer";
 import useAPI from '../../hooks/useAPI'
 import { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 function ServiceListing() {
+  const searchParams = useSearchParams()  
+  const search = searchParams.get('ref')  
   const [services,setServices] = useState()
   useEffect(() => {
     if(!services){
@@ -32,11 +35,9 @@ function ServiceListing() {
     threshold:0.1,
     rootMargin: '0px',    
   }  
-  const serviceRef = useRef()
   const { ref: myref, inView, entry } = useInView(options); 
 
   if(inView){
-    console.log(entry); 
     // serviceContainer.current.scrollIntoView()
   }
   if(services){

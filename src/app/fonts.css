@@ -19,3 +19,8 @@
     src: url('/fonts/dosis.light.ttf') format('opentype');
     /* Additional font properties (e.g., font-weight, font-style) can be specified here */
 }
+@font-face {
+    font-family: 'oswald';
+    src: url('/fonts/oswald.ttf') format('opentype');
+    /* Additional font properties (e.g., font-weight, font-style) can be specified here */
+}

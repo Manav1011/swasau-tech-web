@@ -32,3 +32,18 @@
 .services-zoom-in {
   animation: slideInLeft 1s ease-out; /* Adjust the duration and easing as needed */  
 }
+
+@keyframes FooterDowntoTop {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.footer-bottom-up {
+  animation: FooterDowntoTop 1s ease-out; /* Adjust the duration and easing as needed */  
+}

@@ -14,11 +14,11 @@ export default async function Home() {
   const choosed_grad_index = Math.floor(Math.random() * gradient_arr.length)
   return (
     <>
-      <NavBar grad={gradient_arr[choosed_grad_index]}/>      
-      <MainGraphic grad={gradient_arr[choosed_grad_index]}/>
-      <ServiceListing/>
-      <TeamSection/>
-      <Footer grad={gradient_arr[choosed_grad_index]}/>
+      {/* <NavBar grad={gradient_arr[choosed_grad_index]}/> */}      
+        <MainGraphic grad={gradient_arr[choosed_grad_index]}/>            
+        <ServiceListing/>            
+        <TeamSection/>      
+      {/* <Footer/> */}
     </>
   )
 }

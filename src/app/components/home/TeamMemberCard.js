@@ -1,12 +1,15 @@
 import '../../fonts.css'
+import Link from 'next/link'
 function TeamMemberCard(props) {    
     const {id,dp,name,designation,github,linkedin} = props     
   return (
     <div className="mb-10 text-center text-gray-500 dark:text-gray-400">
+        <Link href={`/team/${id}`}>
         <img className="mx-auto mb-4 w-36 h-36 rounded-full mix-blend-darken" src={dp} alt="Bonnie Avatar" />
         <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">
-            <a href="#">{name}</a>
+            {name}
         </h3>
+        </Link>
         <p>{designation}</p>
         <ul className="flex justify-center mt-4 space-x-4">
         {linkedin ? (<li>

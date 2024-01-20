@@ -1,17 +1,16 @@
 import '../../fonts.css'
-import React from 'react'
 
 function Footer({grad}) {
   return (
-    <div className="h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10" style={{ fontFamily: "dosislight"}}>
-        <footer>
+    <div>
+        <footer id='main-footer' className="footer-bottom-up w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10" style={{ fontFamily: "dosislight"}}>
             <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <div>
                     <div className="flex justify-center text-black-600 sm:justify-start">
                     <img
                       className="h-auto w-48 mix-blend-darken"
-                      src="images/Logo/Swasau-Logo-black.png"
+                      src="/images/Logo/Swasau-Logo-black.png"
                       alt="Your Company"
                     />
                     </div>
