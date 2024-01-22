@@ -1,6 +1,6 @@
 import '../../fonts.css'
 import Link from 'next/link'
-function TeamMemberCard(props) {    
+function TeamMemberCard(props) {
     const {id,dp,name,designation,github,linkedin} = props     
   return (
     <div className="mb-10 text-center text-gray-500 dark:text-gray-400">

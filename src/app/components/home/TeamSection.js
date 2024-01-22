@@ -3,8 +3,9 @@ import { useInView } from "react-intersection-observer";
 import TeamMemberCard from "./TeamMemberCard";
 import useAPI from '../../hooks/useAPI'
 import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 
-function TeamSection() {     
+function TeamSection() {  
     const [members,setMembers] = useState({
         CEO:null,
         CTO:null,

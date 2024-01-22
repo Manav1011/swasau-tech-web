@@ -25,8 +25,8 @@ function ServiceListing() {
           }
         }
       }`
-      useAPI(query).then(res => {
-          setServices(res.data.servicesCollection.items)
+      useAPI(query).then(res => {        
+        setServices(res.data.servicesCollection.items)        
       })
     }
   },[])
