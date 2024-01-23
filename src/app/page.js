@@ -1,10 +1,5 @@
-import NavBar from './components/home/NavBar'
 import MainGraphic from './components/home/MainGraphic'
-import Footer from './components/home/Footer'
-// import TeamSection from './components/home/TeamSection'
-// import ServiceListing from './components/home/ServiceListing'
 import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
 import ServiceSkeleton from './components/Skeletons/ServiceSkeleton'
 
 export default async function Home() {  
@@ -26,12 +21,10 @@ export default async function Home() {
   });
   const choosed_grad_index = Math.floor(Math.random() * gradient_arr.length)
   return (
-    <>
-      {/* <NavBar grad={gradient_arr[choosed_grad_index]}/> */}      
-        <MainGraphic grad={gradient_arr[choosed_grad_index]}/>                    
-        <ServiceListing/>                    
-        <TeamSection/>
-      {/* <Footer/> */}
+    <>      
+      <MainGraphic grad={gradient_arr[choosed_grad_index]}/>                    
+      <ServiceListing/>                    
+      <TeamSection/>      
     </>
   )
 }
