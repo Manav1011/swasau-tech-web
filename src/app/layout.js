@@ -3,6 +3,7 @@ import './globals.css'
 import  {GlobalStateProvider} from './context/GlobalStateProvider'
 import NavBar from './components/home/NavBar'
 import Footer from './components/home/Footer'
+import LogoLoader from './components/Loaders/LogoLoader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,9 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-slate-200`}>
-        <NavBar/>
-        <GlobalStateProvider>{children}</GlobalStateProvider>
-        <Footer/>
+          <GlobalStateProvider>
+            <LogoLoader/>
+            <NavBar/>
+            {children}
+            <Footer/>
+          </GlobalStateProvider>
       </body>
     </html>
   )

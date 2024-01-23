@@ -2,7 +2,7 @@
 import '../../fonts.css'
 import ServiceCard from './ServiceCard'
 import { useInView } from "react-intersection-observer";
-import useAPI from '../../hooks/useAPI'
+import UseAPI from '../../hooks/useAPI'
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
@@ -25,7 +25,7 @@ function ServiceListing() {
           }
         }
       }`
-      useAPI(query).then(res => {        
+      UseAPI(query).then(res => {        
         setServices(res.data.servicesCollection.items)        
       })
     }

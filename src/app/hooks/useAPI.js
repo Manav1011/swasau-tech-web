@@ -1,6 +1,6 @@
 import axios from "axios";
 
-async function useAPI(query, variables) {
+async function UseAPI(query, variables) {
   let res = {
     error: false,
     data: null,
@@ -27,4 +27,4 @@ async function useAPI(query, variables) {
   return res;
 }
 
-export default useAPI;
+export default UseAPI;

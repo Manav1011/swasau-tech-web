@@ -1,9 +1,8 @@
 "use client";
 import { useInView } from "react-intersection-observer";
 import TeamMemberCard from "./TeamMemberCard";
-import useAPI from '../../hooks/useAPI'
+import UseAPI from '../../hooks/useAPI'
 import { useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 
 function TeamSection() {  
     const [members,setMembers] = useState({
@@ -29,7 +28,7 @@ function TeamSection() {
             }
           }
         }`
-        useAPI(query).then(teamMembers=>{
+        UseAPI(query).then(teamMembers=>{
           let ceo = null;
           let cto = null;
           // Filter out 'CEO' and 'CTO' elements

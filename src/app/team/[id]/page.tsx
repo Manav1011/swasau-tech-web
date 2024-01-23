@@ -1,5 +1,6 @@
 'use client'
-import useAPI from "../../hooks/useAPI"
+import UseAPI from "../../hooks/useAPI"
+import Image from "next/image"
 import { useState,useEffect } from "react"
 export default function Page({ params }: { params: { id: string } }) {
     const [member,setMember] = useState(null)
@@ -23,7 +24,7 @@ export default function Page({ params }: { params: { id: string } }) {
             }
           }`
           const variables = {"id":params.id}
-          useAPI(query,variables).then(memberDetails=>{
+          UseAPI(query,variables).then(memberDetails=>{
             setMember(memberDetails.data.team)
           })        
       },[])
@@ -38,7 +39,7 @@ if(member){
             {/* top content */}
             <div className="flex rounded-t-lg bg-top-color sm:px-2 w-full">
                 <div className="h-40 w-40 overflow-hidden sm:rounded-full sm:relative sm:p-0 top-10 left-5 p-3">
-                <img src={member.displayPicture.url} />
+                <Image src={member.displayPicture.url}  alt="No Image" width={200} height={200}/>
                 </div>
                 <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
                 <p className="font-poppins font-bold text-heading sm:text-4xl text-2xl">
@@ -84,8 +85,8 @@ if(member){
                     </h2>
                     <div className="border-2 w-20 border-top-color my-3" />                    
                     <ul className="list-disc ml-2">
-                        {member.skills.map((e) => (
-                            <li className="">
+                        {member.skills.map((e,i) => (
+                            <li className="" key={i}>
                             <div className="">{e}</div>
                             </li>
                         ))}
@@ -98,8 +99,8 @@ if(member){
                     </h2>
                     <div className="border-2 w-20 border-top-color my-3" />
                     <div className="flex flex-col space-y-1">
-                        {member.educationBackground.map((e) => (
-                            <div className="flex flex-col">
+                        {member.educationBackground.map((e,i) => (
+                            <div className="flex flex-col" key={i}>
                             <p className="font-semibold text-xs text-gray-700">2021</p>
                             <p className="text-sm font-medium">
                                 <span className="text-green-700">
@@ -131,8 +132,8 @@ if(member){
                     </h2>
                     <div className="border-2 w-20 border-top-color my-3" />
                     <div className="flex flex-col">
-                        {member.projects.map((e) => (
-                            <div className="flex flex-col">
+                        {member.projects.map((e,i) => (
+                            <div className="flex flex-col" key={i}>
                             <p className="text-lg font-semibold text-gray-700">
                                 {e.title}
                             </p>
