@@ -1,14 +1,10 @@
 'use client'
-import '../../fonts.css'
 import ServiceCard from './ServiceCard'
 import { useInView } from "react-intersection-observer";
 import UseAPI from '../../hooks/useAPI'
 import { useEffect, useRef, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 
 function ServiceListing() {
-  const searchParams = useSearchParams()  
-  const search = searchParams.get('ref')  
   const [services,setServices] = useState()
   useEffect(() => {
     if(!services){
@@ -36,10 +32,6 @@ function ServiceListing() {
     rootMargin: '0px',    
   }  
   const { ref: myref, inView, entry } = useInView(options); 
-
-  if(inView){
-    // serviceContainer.current.scrollIntoView()
-  }
   if(services){
     return (
       <section className={`pt-20 bg-indigo-200`} ref={myref} id='servicescontainer'>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import "../../fonts.css";
 import NavButton from '../../components/NavBar/NavButtons';
 import ToggleNavButton from '../../components/NavBar/ToggleNavButton';
 import Link from "next/link";

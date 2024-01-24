@@ -1,5 +1,3 @@
-import '../../fonts.css'
-
 function Footer({grad}) {
   return (
     <div>

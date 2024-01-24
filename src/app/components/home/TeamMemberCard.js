@@ -1,4 +1,3 @@
-import '../../fonts.css'
 import Link from 'next/link'
 function TeamMemberCard(props) {
     const {id,dp,name,designation,github,linkedin} = props     

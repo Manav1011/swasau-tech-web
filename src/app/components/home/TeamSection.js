@@ -54,10 +54,7 @@ function TeamSection() {
     threshold:0.1,    
   }
   const teammembersRef = useRef()
-  const { ref: myref, inView, entry } = useInView(options);  
-  if(inView){
-    // teammembersRef.current.scrollIntoView()
-  }
+  const { ref: myref, inView, entry } = useInView(options);    
   if(members.CTO && members.CTO){
     return (        
         <section className={`bg-rose-100 pt-5`} id="teamdetailscontainer" ref={myref}>
