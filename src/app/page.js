@@ -1,6 +1,6 @@
 import MainGraphic from './components/home/MainGraphic'
 import dynamic from 'next/dynamic'
-import ServiceSkeleton from './components/Skeletons/ServiceSkeleton'
+// import ServiceSkeleton from './components/Skeletons/ServiceSkeleton'
 
 export default async function Home() {  
   const gradient_arr = [

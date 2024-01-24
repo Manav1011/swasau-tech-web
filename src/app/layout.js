@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
           <GlobalStateProvider>
             <LogoLoader/>
             <NavBar/>
-            {children}
+            {/* {children} */}
             <Footer/>
           </GlobalStateProvider>
       </body>
