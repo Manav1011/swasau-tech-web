@@ -1,9 +1,9 @@
 import './globals.css'
 import './fonts.css'
-// import  {GlobalStateProvider} from './context/GlobalStateProvider'
-// import NavBar from './components/home/NavBar'
-// import Footer from './components/home/Footer'
-// import LogoLoader from './components/Loaders/LogoLoader'
+import  {GlobalStateProvider} from './context/GlobalStateProvider'
+import NavBar from './components/home/NavBar'
+import Footer from './components/home/Footer'
+import LogoLoader from './components/Loaders/LogoLoader'
 
 export const metadata = {
   title: 'Swasau Tech',
@@ -14,13 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-slate-200`}>
-      hello
-          {/* <GlobalStateProvider> */}
-            {/* <LogoLoader/> */}
-            {/* <NavBar/> */}
-            {/* {children} */}
-            {/* <Footer/> */}
-          {/* </GlobalStateProvider> */}
+          <GlobalStateProvider>
+            <LogoLoader/>
+            <NavBar/>
+            {children}
+            <Footer/>
+          </GlobalStateProvider>
       </body>
     </html>
   )
