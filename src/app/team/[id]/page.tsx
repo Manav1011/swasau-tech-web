@@ -1,5 +1,5 @@
 'use client'
-import UseAPI from "../../hooks/useAPI"
+import UseAPI from "../../../hooks/useAPI"
 import Image from "next/image"
 import { useState,useEffect } from "react"
 export default function Page({ params }: { params: { id: string } }) {

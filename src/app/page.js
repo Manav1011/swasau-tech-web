@@ -1,6 +1,6 @@
-import MainGraphic from './components/home/MainGraphic'
+import MainGraphic from '../components/home/MainGraphic'
 import dynamic from 'next/dynamic'
-import ServiceSkeleton from './components/Skeletons/ServiceSkeleton'
+import ServiceSkeleton from '../components/Skeletons/ServiceSkeleton'
 
 export default async function Home() {  
   const gradient_arr = [
@@ -9,12 +9,12 @@ export default async function Home() {
     "bg-gradient-to-r from-violet-500 to-fuchsia-500",
     "bg-gradient-to-r from-purple-500 to-pink-500"
   ]
-  const ServiceListing = dynamic(() => import("./components/home/ServiceListing"), {
+  const ServiceListing = dynamic(() => import("../components/home/ServiceListing"), {
     suspense: true,
     ssr:false,
     loading: () => <ServiceSkeleton/>
   });
-  const TeamSection = dynamic(() => import("./components/home/TeamSection"), {
+  const TeamSection = dynamic(() => import("../components/home/TeamSection"), {
     suspense: true,
     ssr:false,
     loading: () => <ServiceSkeleton/>

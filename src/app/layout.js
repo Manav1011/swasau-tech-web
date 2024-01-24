@@ -1,9 +1,9 @@
 import './globals.css'
 import './fonts.css'
-import  {GlobalStateProvider} from './context/GlobalStateProvider'
-import NavBar from './components/home/NavBar'
-import Footer from './components/home/Footer'
-import LogoLoader from './components/Loaders/LogoLoader'
+import  {GlobalStateProvider} from '../context/GlobalStateProvider'
+import NavBar from '../components/home/NavBar'
+import Footer from '../components/home/Footer'
+import LogoLoader from '../components/Loaders/LogoLoader'
 
 export const metadata = {
   title: 'Swasau Tech',

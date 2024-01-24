@@ -1,4 +1,3 @@
-import '../../fonts.css'
 function MainGraphic({grad}) {
     const graphics_arr = [
         "Collaboration-cuate.svg",
