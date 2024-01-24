@@ -1,3 +1,4 @@
+'use client'
 const ServiceCard = ({ icon, title }) => {    
     const backgroundImageStyle = {
         backgroundImage: `url('${icon}')`,        
